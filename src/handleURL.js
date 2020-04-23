@@ -8,7 +8,7 @@ const handleURL = async url => {
   }
   const options = {
     url,
-    dest: path.resolve(__dirname, '../images'),
+    dest: path.resolve(__dirname, '../images/v1'),
   }
   return downloader.image(options)
     .then(({ filename, image }) => {
