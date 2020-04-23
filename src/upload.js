@@ -24,7 +24,7 @@ const upload = async () => {
       console.error('You need to provide at least one between FILE and URL.')
       return;
     }
-    // await handleURL(url);
+    await handleURL(url);
     await handleFile(file);
     await uploadImageToGithubRepo();
 

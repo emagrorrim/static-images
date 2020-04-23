@@ -1,7 +1,7 @@
 const sh = require('./utils/sh');
 
-const uploadImageToGithubRepo = () => {
-  return sh('git add --all;git commit -m "Add basic auto steps"').then(output => {
+const uploadImageToGithubRepo = (image) => {
+  return sh('git add --all;git commit -m "Add image"').then(output => {
     if (output && output.stdout) {
       console.log(output.stdout);
     }
