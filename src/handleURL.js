@@ -1,5 +1,6 @@
 const downloader = require('image-downloader')
 const path = require('path');
+const fetch = require('node-fetch');
 
 const handleURL = async url => {
   if (!url) {
@@ -13,7 +14,6 @@ const handleURL = async url => {
     .then(({ filename, image }) => {
       console.log('The image is saved to', filename);
     })
-    .catch(console.error)
 };
 
 module.exports = handleURL;

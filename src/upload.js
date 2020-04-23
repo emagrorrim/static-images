@@ -2,6 +2,7 @@ const minimist = require('minimist');
 const handleURL = require('./handleURL');
 const handleFile = require('./handleFile');
 const uploadImageToGithubRepo = require('./uploadImageToGithubRepo');
+const run = require('./utils/runner');
 
 const usage = `
 usage: upload [parameters]... 
@@ -23,7 +24,7 @@ const upload = async () => {
       console.error('You need to provide at least one between FILE and URL.')
       return;
     }
-    await handleURL(url);
+    // await handleURL(url);
     await handleFile(file);
     await uploadImageToGithubRepo();
 
@@ -35,4 +36,4 @@ const upload = async () => {
   }
 };
 
-upload();
+upload()
