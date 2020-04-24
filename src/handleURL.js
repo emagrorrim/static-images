@@ -1,5 +1,6 @@
 const downloader = require('image-downloader')
 const path = require('path');
+const uuid = require('uuid').v5;
 
 const handleURL = async url => {
   if (!url) {
@@ -7,7 +8,7 @@ const handleURL = async url => {
   }
   const options = {
     url,
-    dest: path.resolve(__dirname, '../images/v1'),
+    dest: path.resolve(__dirname, `../images/v2/${new Date().getTime()}/${uuid()}`),
   }
   return downloader.image(options)
     .then(({ filename, image }) => {
