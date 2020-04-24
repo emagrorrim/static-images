@@ -21,7 +21,7 @@ const handleURL = async url => {
   return downloader.image(options)
     .then(({ filename, image }) => {
       console.log('The image is saved to', filename);
-      console.log('The image is at ', `https://raw.githubusercontent.com/emagrorrim/static-images/master/images/v2/${timestamp}/${name}`);
+      console.log('The image is at', `https://raw.githubusercontent.com/emagrorrim/static-images/master/images/v2/${timestamp}/${name}`);
     })
 };
 
