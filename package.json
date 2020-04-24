@@ -17,9 +17,7 @@
   },
   "homepage": "https://github.com/emagrorrim/static-images#readme",
   "dependencies": {
-    "express": "^4.17.1",
     "image-downloader": "^3.5.0",
-    "minimist": "^1.2.5",
-    "node-fetch": "^2.6.0"
+    "minimist": "^1.2.5"
   }
 }

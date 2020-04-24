@@ -1,6 +1,5 @@
 const downloader = require('image-downloader')
 const path = require('path');
-const fetch = require('node-fetch');
 
 const handleURL = async url => {
   if (!url) {

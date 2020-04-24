@@ -2,7 +2,6 @@ const minimist = require('minimist');
 const handleURL = require('./handleURL');
 const handleFile = require('./handleFile');
 const uploadImageToGithubRepo = require('./uploadImageToGithubRepo');
-const run = require('./utils/runner');
 
 const usage = `
 usage: upload [parameters]... 
