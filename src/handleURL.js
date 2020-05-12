@@ -3,6 +3,8 @@ const path = require('path');
 const uuid = require('uuid').v4;
 const sh = require('./utils/sh');
 
+const acceptableImageFormats = ['jpg', 'jpeg', 'png'];
+
 const handleURL = async url => {
   if (!url) {
     return;
@@ -27,7 +29,8 @@ const handleURL = async url => {
 
 const extractFormat = url => {
   const components = url.split('.');
-  return components[components.length - 1]
+  const formatFromURL = components[components.length - 1];
+  return acceptableImageFormats.includes(formatFromURL) ? formatFromURL : acceptableImageFormats[0];
 }
 
 module.exports = handleURL;
